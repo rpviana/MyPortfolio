@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blog Post</title>
+<style>
+  /* Reset simples */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #222;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0 1rem 3rem;
+    line-height: 1.6;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #333;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  }
+
+  #post {
+    background: #444;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+  }
+
+  h2 {
+    color: #f0a500;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Meta info */
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+  }
+
+  .meta p {
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .meta time {
+    font-style: normal;
+  }
+
+  .meta .dot {
+    width: 6px;
+    height: 6px;
+    background: #aaa;
+    border-radius: 50%;
+  }
+
+  /* Imagem principal */
+  .main-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    object-fit: cover;
+  }
+
+  /* Conteúdo do post */
+  .post-content p {
+    margin-bottom: 1.3rem;
+    text-align: justify;
+    color: #ddd;
+    font-size: 1.1rem;
+  }
+
+  /* Galeria de imagens */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+    gap: 12px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px #f0a500;
+  }
+
+  /* Botão voltar */
+  .back-button {
+    text-align: center;
+  }
+
+  .back-button a {
+    display: inline-block;
+    background: #f0a500;
+    color: #222;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 0 8px #f0a500aa;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .back-button a:hover {
+    background: #d18e00;
+    box-shadow: 0 0 12px #d18e00cc;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    main {
+      padding: 1rem 1.5rem;
+    }
+
+    .post-content p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <article id="post">
+    <!-- conteúdo gerado por JS -->
+  </article>
+</main>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const posts = {
+    1: {
+      titulo: "1º Place in ATLIC Creative Jam",
+      categoria: "Contest",
+      data: "29 May, 2025",
+      imagem: "https://i.ibb.co/Ldk1q455/img1.jpg",
+      conteudo: `
+        <p>🏆 I won 1st place at the ATLIC Creative Jam, an international contest focused on sustainability, biodiversity, and the blue economy!</p>
+        <p>I proudly represented my school, which supported and enabled me to participate in this activity alongside my colleague Lucas Soares. We also had the chance to meet Igor, a Marketing student at ISMAI, with whom we shared ideas, visions, and a lot of motivation.</p>
+        <p>💧 ATLIC basically consists of building an innovative and sustainable idea (that somehow impacts the blue economy) in just 2 days. So, in 2 days we had to brainstorm ideas, select the best one, fully focus on it, and do a 5-minute elevator pitch about it.</p>
+        <p>💡 Our idea was about “sponsoring” a floating device (like a buoy but with sensors) that monitors water quality in real-time (pH, temperature, salinity, and nutrients) using eco-friendly sensors. The technology would be self-sufficient, powered by a solar panel on top. The “sponsorship” would connect people even more with nature and promote harmony already present in the area. We also planned incentives to encourage people to “take care” of their device, including points (photos below of the prototype and app we made) and, most importantly, exclusivity of the object.</p>
+        <p>🌊 This project now allows us to continue our journey. In November, we will go to Santiago de Compostela, Spain, and in 2026, to Donegal, Ireland, where we will keep developing it in a technological environment with international support.</p>
+        <p>🫂 I want to thank the ATLIC team for their help and the “extra hands” that supported us throughout the project. I also want to thank my two colleagues (Lucas and Igor) who stayed calm and did great during the final pitch. Finally, thanks to professor Alexandra (Alexandra Silva) and professor Luís Santos who accompanied us and gave all the support needed during the presentation.</p>
+        <p>🔁 An idea will always be just an idea until it becomes a project.😉</p>
+        <p>Canva Pitch: <a href="https://lnkd.in/dwAKRATe" rel="noopener noreferrer">https://lnkd.in/dwAKRATe</a></p>
+      `,
+      galeria: [
+        "https://i.ibb.co/1tT2YT06/img2.jpg",
+        "https://i.ibb.co/GvJN158v/img3.jpg",
+        "https://i.ibb.co/pvyghpQw/img4.jpg"
+      ]
+    },
+    2: {
+      titulo: "2º Blog(a vir)",
+      categoria: "Em Breve",
+      data: "30 Fev, 2025",
+      imagem: "https://i.postimg.cc/QC7qFDMs/blog-2.jpg",
+      conteudo: `
+        <p>A escolha da fonte certa é fundamental para um design eficaz.</p>
+        <p>Aqui estão algumas das melhores fontes que todos os designers deviam considerar usar.</p>
+      `,
+      galeria: [
+        "https://i.postimg.cc/ZR2STrkH/font1.jpg",
+        "https://i.postimg.cc/tJz2Fw6N/font2.jpg"
+      ]
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get("id"), 10);
+
+  const container = document.getElementById("post");
+  const post = posts[id];
+
+  if (container && post) {
+    // Construir galeria se existir
+    let galeriaHtml = "";
+    if (post.galeria && post.galeria.length > 0) {
+      galeriaHtml = '<div class="gallery">';
+      post.galeria.forEach(url => {
+        galeriaHtml += `<img src="${url}" alt="Imagem do post" loading="lazy" />`;
+      });
+      galeriaHtml += '</div>';
+    }
+
+    container.innerHTML = `
+      <h2>${post.titulo}</h2>
+      <div class="meta">
+        <p>${post.categoria}</p>
+        <span class="dot"></span>
+        <time>${post.data}</time>
+      </div>
+      <img src="${post.imagem}" alt="${post.titulo}" class="main-image" loading="lazy" />
+      <div class="post-content">${post.conteudo}</div>
+      ${galeriaHtml}
+      <div class="back-button"><a href="index.html#blog">← Voltar ao Blog</a></div>
+    `;
+  } else {
+    container.innerHTML = `<p>Post não encontrado.</p><div class="back-button"><a href="index.html">← Voltar atrás</a></div>`;
+  }
+});
+</script>
+
+</body>
+</html>
